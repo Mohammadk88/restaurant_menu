@@ -22,4 +22,9 @@ class Category extends Model
         'max_level',
         'restaurant_id',
     ];
+
+    public function restaurant(): \Illuminate\Database\Eloquent\Relations\BelongsTo
+    {
+        return $this->belongsTo(Restaurant::class);
+    }
 }

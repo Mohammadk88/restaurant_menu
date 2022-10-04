@@ -20,4 +20,9 @@ class Item extends Model
         'discount',
         'price',
     ];
+
+    public function category(): \Illuminate\Database\Eloquent\Relations\BelongsTo
+    {
+        return $this->belongsTo(Category::class);
+    }
 }

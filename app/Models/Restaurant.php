@@ -18,4 +18,9 @@ class Restaurant extends Model
         'name',
         'description',
     ];
+
+    public function user(): \Illuminate\Database\Eloquent\Relations\HasMany
+    {
+        return $this->hasMany(User::class);
+    }
 }
